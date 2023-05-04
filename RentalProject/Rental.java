@@ -4,14 +4,14 @@ import java.util.List;
 
 public class Rental {
     private Customer customer;
-    private Movie movie;
+    private Item item;
     private final int Id;
     private  Date rentaldate;
     private Date returndate;
 
-    public Rental(Customer customer, Movie movie, int Id) {
+    public Rental(Customer customer, Item item, int Id) {
         this.customer = customer;
-        this.movie = movie;
+        this.item = item;
         this.Id = Id;
     }
     /////////////////////////////////////////////////////////setters
@@ -29,8 +29,8 @@ public class Rental {
         return customer;
     }
 
-    public Movie getMovie() {
-        return movie;
+    public Item getItem() {
+        return item;
     }
 
     public int getId() {
