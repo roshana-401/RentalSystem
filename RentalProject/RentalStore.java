@@ -1,36 +1,38 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class RentalStore
 {
-    private List<Item>items=new ArrayList<Item>();
+    private List<Movie>movies=new ArrayList<Movie>();
     private List<Customer>customers=new ArrayList<Customer>();
 
     public void register(Customer customer)
     {
         this.customers.add(customer);
     }
-    public void addItem(Item item)
+    public void addMovie(Movie movie)
     {
-        this.items.add(item);
+        this.movies.add(movie);
     }
-    public void removeItem(Item item)
+    public void removeMovie(Movie movie)
     {
-        this.items.remove(item);
+        this.movies.remove(movie);
     }
-    public List<Item> getAvailableItems()
+    public List<Movie> getAvailableMovies()
     {
-        return items;
+        return movies;
     }
-    public void rentItem(Item item, Customer customer)
+    public void rentMovie(Movie movie, Customer customer)
     {
-         customer.setRentals(new Rental(customer,item,item.getId()));
-        for (Item mm:items) {
-             if(mm.getId()==item.getId())
-                 this.items.remove(item);
+        customer.setRentals(new Rental(customer,movie,movie.getId()));
+        for (Movie mm:movies) {
+             if(mm.getId()==movie.getId())
+                 this.movies.remove(movie);
         }
+        movie.setAvailable(false);
     }
-    public void returnItem(Rental rental)
+    public void returnMovie(Rental rental)
     {
 
         Customer cc=rental.getCustomer();
@@ -39,8 +41,9 @@ public class RentalStore
                 cc.getRentals().remove(rental);
 
         }
-
-        items.add(rental.getItem());
+        rental.setReturndate(new Date());
+        rental.getMovie().setAvailable(true);
+        movies.add(rental.getMovie());
     }
     public Customer getCustomerById(int Id)
     {
@@ -50,9 +53,9 @@ public class RentalStore
         }
         return null;
     }
-    public Item getItemById(int Id)
+    public Movie getMovieById(int Id)
     {
-        for (Item mm:items) {
+        for (Movie mm:movies) {
             if(mm.getId()==Id)
                 return mm;
         }

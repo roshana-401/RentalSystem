@@ -4,23 +4,24 @@ import java.util.List;
 
 public class Rental {
     private Customer customer;
-    private Item item;
+    private Movie movie;
     private final int Id;
-    private final Date rentaldate;
+    private  Date rentaldate;
     private Date returndate;
 
-    public Rental(Customer customer, Item item, int Id) {
+    public Rental(Customer customer, Movie movie, int Id) {
         this.customer = customer;
-        this.item = item;
+        this.movie = movie;
         this.Id = Id;
-        rentaldate = new Date();
-        returndate= new Date();
-        returndate.setDate(rentaldate.getDate() + 14);
     }
     /////////////////////////////////////////////////////////setters
 
     public void setReturndate(Date returndate) {
         this.returndate = returndate;
+    }
+
+    public void setRentaldate(Date rentaldate) {
+        this.rentaldate = rentaldate;
     }
     ///////////////////////////////////////////////////////getters
 
@@ -28,8 +29,8 @@ public class Rental {
         return customer;
     }
 
-    public Item getItem() {
-        return item;
+    public Movie getMovie() {
+        return movie;
     }
 
     public int getId() {
