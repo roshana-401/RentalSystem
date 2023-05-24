@@ -42,17 +42,20 @@ public class Show {
             int nn = input1.nextInt();
             switch (nn) {
                 case 1:
-                    System.out.println("----------------------**Games**----------------------");
+                    System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-----------------------------------**Games**-----------------------------------" + "\n\n");
                     rent.rental(lib.getGames());
                     break;
 
                 case 2:
-                    System.out.println("----------------------**Movies**----------------------");
+                    System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-----------------------------------**Movies**-----------------------------------" + "\n\n");
                     rent.rental(lib.getMovies());
                     break;
 
                 case 3:
-                    System.out.println("----------------------**Books**----------------------");
+                    System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-----------------------------------**Books**-----------------------------------" + "\n\n");
                     rent.rental(lib.getBooks());
                     break;
 

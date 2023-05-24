@@ -12,14 +12,14 @@ public class Main {
 
         //-------------------------------------------READ FROM GSON
         Gson gson = new Gson();
-        Reader reader = new FileReader("D:\\RentalFinal\\RentalSystem\\RentalProject\\src\\test\\TestYourFork.json"); // open the input file
+        Reader reader = new FileReader("D:\\RentalSystem\\RentalProject\\src\\test\\TestYourFork.json"); // open the input file
         Library lib = gson.fromJson(reader, new TypeToken<Library>() {
 
         }.getType());
         reader.close();
         //--------------------------------------------WRITE FROM GSON
         Gson write = new Gson();
-        String filePath = "D:\\RentalFinal\\RentalSystem\\RentalProject\\src\\test\\output.json";
+        String filePath = "D:\\RentalSystem\\RentalProject\\src\\test\\output.json";
 
         try {
             FileWriter writer = new FileWriter(filePath);
@@ -211,7 +211,6 @@ public class Main {
             } else if (check) {
                 if (lib.getLibraryManager().getName().equalsIgnoreCase(name) == true) {
 
-                    System.out.println("Welcom " + lib.getLibraryManager());
                     return true;
                 } else
                     System.out.println("Wrong username!!" + "\n\n");
