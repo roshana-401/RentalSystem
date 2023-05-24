@@ -335,7 +335,8 @@
       "email": "johnsmith@example.com",
       "phoneNumber": "1234567890",
       "Address": "123 Main Street",
-      "rentals":null
+      "rentals":[],
+      "returnItem": []
     },
     {
       "CustomerID": 2,
@@ -343,7 +344,8 @@
       "email": "emilyjohnson@example.com",
       "phoneNumber": "9876543210",
       "Address": "456 Oak Avenue",
-      "rentals": null
+      "rentals": [],
+      "returnItem": []
     },
     {
       "CustomerID": 3,
@@ -351,15 +353,16 @@
       "email": "michaelbrown@example.com",
       "phoneNumber": "5555555555",
       "Address": "789 Elm Street",
-      "rentals": null
+      "rentals": [],
+      "returnItem": []
     }
   ],
   "LibraryManager":
-    {
-      "ManagerID": 1010,
-      "name": "Sara Lance",
-      "email": "saralance@example.com",
-      "phoneNumber": "12456563420",
-      "Address": "789 Elm Street"
-    }
+  {
+    "ManagerID": 1010,
+    "name": "Sara Lance",
+    "email": "saralance@example.com",
+    "phoneNumber": "12456563420",
+    "Address": "789 Elm Street"
+  }
 }
