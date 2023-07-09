@@ -15,7 +15,7 @@ public class Item
         this.Title="";
         this.genre="";
         this.releaseDate="";
-        this.isAvailable=false;
+        this.isAvailable=true;
         this.Id=0;
     }
     public Item(String Title, String genre, String author, String releaseDate, int Id)
@@ -24,7 +24,7 @@ public class Item
         this.genre=genre;
         Author = author;
         this.releaseDate=releaseDate;
-        this.isAvailable=false;
+        this.isAvailable=true;
         this.Id=Id;
     }
     ////////////////////////////////////////////setters

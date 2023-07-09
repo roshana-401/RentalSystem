@@ -12,14 +12,14 @@ public class Main {
 
         //-------------------------------------------READ FROM GSON
         Gson gson = new Gson();
-        Reader reader = new FileReader("D:\\RentalSystem\\RentalProject\\src\\test\\TestYourFork.json"); // open the input file
+        Reader reader = new FileReader("D:\\NIT\\Jozve\\Ostad Maqsudi\\Project\\RentalSystem\\RentalProject\\src\\test\\TestYourFork.json"); // open the input file
         Library lib = gson.fromJson(reader, new TypeToken<Library>() {
 
         }.getType());
         reader.close();
         //--------------------------------------------WRITE FROM GSON
         Gson write = new Gson();
-        String filePath = "D:\\RentalSystem\\RentalProject\\src\\test\\output.json";
+        String filePath = "D:\\NIT\\Jozve\\Ostad Maqsudi\\Project\\RentalSystem\\RentalProject\\src\\test\\output.json";
 
         try {
             FileWriter writer = new FileWriter(filePath);
